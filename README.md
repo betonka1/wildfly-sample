@@ -4,7 +4,7 @@ Simple Wildfly 20 EAR project.
 
 ## Wildfly installation
 
-Go to https://www.wildfly.org/ find Wildfly 20.0.1.Final, download and extract 
+Go to https://www.wildfly.org/ , find Wildfly 20.0.1.Final, download and extract 
 
 ## Manual Deployment
 
@@ -15,7 +15,9 @@ In project directory run:
 	mvn package
 	
 Copy `wildfly.ear` from `target` directory to `<WildflyInstallationDir>/standalone/deployments`.
+
 Copy `wildfly-ear/src/main/config/jboss/standalone/configuration/standalone.xml` to `<WildflyInstallationDir>/standalone/configuration`.
+
 Create `wildfly.dodeploy` file in `<WildflyInstallationDir>/standalone/deployments`.
 
 Start server on Linux by:
@@ -24,7 +26,7 @@ Start server on Linux by:
 
 or Windows by:
 
-	<WildflyInstallationDir>/bin/standalone.cmd 
+	<WildflyInstallationDir>/bin/standalone.bat 
 
 
 ## Deployment in Eclipse 
