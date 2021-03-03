@@ -41,6 +41,12 @@
             <artifactId>wildfly-web</artifactId>
             <type>war</type>
         </dependency>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>wildfly-rest</artifactId>
+            <type>war</type>
+        </dependency>
     </dependencies>
 
     <build>

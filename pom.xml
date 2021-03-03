@@ -29,7 +29,8 @@
     <modules>
         <module>wildfly-ejb</module>
         <module>wildfly-web</module>
-        <module>wildfly-ear</module>        
+        <module>wildfly-ear</module>
+        <module>wildfly-rest</module>        
     </modules>
 
     <properties>
@@ -81,6 +82,14 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>wildfly-web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+                <scope>compile</scope>
+            </dependency>
+            
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>wildfly-rest</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
