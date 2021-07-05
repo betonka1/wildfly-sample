@@ -15,7 +15,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -34,14 +35,14 @@
             <artifactId>wildfly-ejb</artifactId>
             <type>ejb</type>
         </dependency>
-        
+
         <!-- Depend on the EJB module and WAR so that we can package them -->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>wildfly-web</artifactId>
             <type>war</type>
         </dependency>
-        
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>wildfly-rest</artifactId>
@@ -52,7 +53,7 @@
     <build>
         <finalName>${project.parent.artifactId}</finalName>
         <plugins>
-			<!--EAR plugin: format of output file -->
+            <!--EAR plugin: format of output file -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
@@ -65,16 +66,16 @@
                         have any modules (EJB-JARs and WARs) use them -->
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
-                    <!-- Default context root of the web app is /wildfly3-web.
-                        If a custom context root is needed, uncomment the following snippet to
-                        register our War as a web module and set the contextRoot property -->
-                    <!--
-                    <webModule>
-                        <groupId>${project.groupId}</groupId>
-                        <artifactId>wildfly3-web</artifactId>
-                        <contextRoot>/wildfly3</contextRoot>
-                    </webModule>
-                    -->
+                        <!-- Default context root of the web app is /wildfly3-web.
+                            If a custom context root is needed, uncomment the following snippet to
+                            register our War as a web module and set the contextRoot property -->
+                        <!--
+                        <webModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>wildfly3-web</artifactId>
+                            <contextRoot>/wildfly3</contextRoot>
+                        </webModule>
+                        -->
                     </modules>
                     <outputFileNameMapping>@{artifactId}@@{dashClassifier?}@.@{extension}@</outputFileNameMapping>
                 </configuration>

@@ -1,7 +1,5 @@
 package org.example.wildfly3.test;
 
-import java.io.File;
-
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
@@ -13,9 +11,11 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.File;
+
 /**
  * Sample integration test: demonstrates how to create the EAR file using the ShrinkWrap API.
- * 
+ * <p>
  * Delete this file if no integration test is required.
  */
 @RunWith(Arquillian.class)
@@ -23,7 +23,7 @@ public class SampleIT {
 
     /**
      * Creates the EAR file that is deployed to the server.
-     * 
+     *
      * @return EAR archive
      */
     @Deployment
@@ -59,7 +59,6 @@ public class SampleIT {
 
     /**
      * A sample test...
-     * 
      */
     @Test
     public void test() {
