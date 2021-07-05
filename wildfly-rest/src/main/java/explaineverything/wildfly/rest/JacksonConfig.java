@@ -1,6 +1,7 @@
 package explaineverything.wildfly.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -13,6 +14,7 @@ public class JacksonConfig implements ContextResolver<ObjectMapper> {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     public JacksonConfig() {
+        objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
     }
 
     @Override
